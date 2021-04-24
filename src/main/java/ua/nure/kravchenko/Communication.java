@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import ua.nure.kravchenko.entity.Balance;
 import ua.nure.kravchenko.entity.Location;
+import ua.nure.kravchenko.entity.Payment;
 import ua.nure.kravchenko.entity.app.Statistic;
 import ua.nure.kravchenko.entity.help.AuthRequest;
 import ua.nure.kravchenko.entity.User;
@@ -97,6 +98,13 @@ public class Communication {
     public Statistic getDailyStatistics(HttpHeaders headers, int locationId){
         HttpEntity<String> request = new HttpEntity<>(headers);
         ResponseEntity<Statistic> responseEntity = restTemplate.exchange("http://localhost:8080/manager/statistics/" + locationId, HttpMethod.GET, request, new ParameterizedTypeReference<Statistic>() {
+        });
+        return responseEntity.getBody();
+    }
+
+    public List<Payment> getPayments(HttpHeaders headers, int id){
+        HttpEntity<String> request = new HttpEntity<>(headers);
+        ResponseEntity<List<Payment>> responseEntity = restTemplate.exchange("http://localhost:8080/manager/balance/payments/" + id, HttpMethod.GET, request, new ParameterizedTypeReference<List<Payment>>() {
         });
         return responseEntity.getBody();
     }
