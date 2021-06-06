@@ -66,7 +66,5 @@ public class AloneLocationServlet extends HttpServlet {
                     req.setAttribute("error", "User was not added to the location");
                 }
         }
-
-
     }
 }

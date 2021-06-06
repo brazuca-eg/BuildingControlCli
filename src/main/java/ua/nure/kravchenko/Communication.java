@@ -52,8 +52,8 @@ public class Communication {
         return responseEntity.getBody();
     }
 
-    public Balance acceptRequest(int id, HttpEntity req) {
-        ResponseEntity<Balance> result = restTemplate.postForEntity("http://localhost:8080/manager/users/" + id + "/accept", req, Balance.class);
+    public Balance acceptRequest(int id, int id2, HttpEntity req) {
+        ResponseEntity<Balance> result = restTemplate.postForEntity("http://localhost:8080/manager/users/" + id +"/" + id2 + "/accept", req, Balance.class);
         return result.getBody();
     }
 

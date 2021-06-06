@@ -4,7 +4,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.http.HttpHeaders;
 import ua.nure.kravchenko.Communication;
 import ua.nure.kravchenko.configuration.MyConfig;
-import ua.nure.kravchenko.entity.Location;
 import ua.nure.kravchenko.entity.Payment;
 import ua.nure.kravchenko.entity.User;
 

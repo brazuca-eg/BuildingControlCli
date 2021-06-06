@@ -46,7 +46,7 @@ public class AloneUserServlet extends HttpServlet {
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(MyConfig.class);
         Communication communication = annotationConfigApplicationContext.getBean("communication", Communication.class);
         if (req.getParameter("accept") != null) {
-            communication.acceptRequest(chosenUser.getId(), request);
+            communication.acceptRequest(chosenUser.getId(), user.getId(), request);
             req.setAttribute("info", "Request was successfully accepted");
             User updateUser = communication.user(chosenUser.getId(), request);
             session.setAttribute("us", updateUser);

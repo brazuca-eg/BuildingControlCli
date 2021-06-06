@@ -50,9 +50,9 @@
                         </div>
                         <div class="about_us_content">
                             <form method="post" >
-                                <p><button type="submit"  class="btn btn-success">Accept request</button></p>
+                                <p><button type="submit" name = "accept"  class="btn btn-success">Accept request</button></p>
                                 <br>
-                                <p><button type="submit" class="btn btn-danger">Decline request</button></p>
+                                <p><button type="submit" name = "decline" class="btn btn-danger">Decline request</button></p>
                             </form>
                         </div>
                         <div class="about_us_content">
